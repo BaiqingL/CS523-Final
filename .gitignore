@@ -1,6 +1,12 @@
 # Dataset
 data/
 
+# Model Checkpoint
+my_checkpoint.pth.tar
+
+# saved images
+saved_images/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
