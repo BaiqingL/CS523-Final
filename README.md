@@ -6,7 +6,8 @@ Dataset can be downloaded here: https://www.kaggle.com/mateuszbuda/lgg-mri-segme
 
 
 #### Our goal:
-
+We want to not only indicate the tumors that exist clearly in brain MR images but also indicate those which cannot be seen from
+eyes to discove the tumors as sson as possible for treatment. 
 
 
 #### Describe dataset:
@@ -27,7 +28,8 @@ The dataset is organized into 110 folders named after case ID that contains info
 
 #### Rough Ideas:
 
-We want to first filter the 
-We plan to implement a network and training strategy that relies on the strong use of data augmentation to use the available annotated samples more efficiently. The general architecture consists of a contracting path to capture the picture of tumors and a symmetric expanding path that enables the localization of where the tumors are.
+We want to first filter MR images that reflect no tumor and the tumors that are easily detected by brain MR images. We implement simple network layers of color difference detection identify. 
+Then, for those tumors that cannot be detected by human eyes, we plan to implement a network and training strategy that relies on the strong use of data augmentation to use the available annotated samples more efficiently. The general architecture consists of a contracting path to capture the picture of tumors and a symmetric expanding path that enables the localization of where the tumors are.
 
-In many visual tasks, especially in biomedical image processing, the desired output should include localization, i.e., a class label is supposed to be assigned to each pixel to indicate where exists the tumor. Therefore, we use a network in a sliding-window setup to predict the class label of each pixel by providing a local region (patch) around that pixel. In this "fully convolutional network", the main idea is to supplement a usual contracting network by successive layers and replace the pooling operators to upsampling operators to increase the resolution of the output. To guarantee the localization, high resolution features from the contracting path should be combined with the upsampled output. A successive convolution layer can then learn to assemble a more precise output based on this information.
+In many visual tasks, especially in biomedical image processing, the desired output should include localization, i.e., a class label is supposed to be assigned to each pixel to indicate where exists the tumor. Therefore, we use a network in a sliding-window setup to predict the class label of each pixel by providing a local region (patch) around that pixel. In this U-net network, the main idea is to supplement a usual contracting network by successive layers and replace the pooling operators to upsampling operators to increase the resolution of the output. To guarantee the localization, high resolution features from the contracting path should be combined with the upsampled output. In this way, we reinforce the pixels where hidden tumors represent and demonstrate more directly for human eyes to observe. 
+
