@@ -23,11 +23,6 @@ Masks are binary, 1-channel images.
 They segment FLAIR abnormality present in the FLAIR sequence (available for all cases).
 
 The dataset is organized into 110 folders named after case ID that contains information about source institution.
-Each folder contains MR images with the following naming convention:
-
-TCGA<institution-code><patient-id>_<slice-number>.tif
-
-Corresponding masks have a _mask suffix.
 
 
 #### Rough Ideas:
