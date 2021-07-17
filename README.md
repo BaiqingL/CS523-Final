@@ -25,7 +25,12 @@ They segment FLAIR abnormality present in the FLAIR sequence (available for all 
 
 The dataset is organized into 110 folders named after case ID that contains information about source institution.
 
-
+#### Referenced Paper
+U-Net: Convolutional Networks for Biomedical Image Segmentation:
+https://arxiv.org/pdf/1505.04597.pdf
+Association of genomic subtypes of lower-grade gliomas with shape
+features automatically extracted by a deep learning algorithm
+https://arxiv.org/pdf/1906.03720.pdf
 #### Rough Ideas:
 
 We want to first filter MR images that reflect no tumor and the tumors that are easily detected by brain MR images. We implement simple network layers of color difference detection identify. 
