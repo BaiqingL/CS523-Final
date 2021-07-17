@@ -1,9 +1,9 @@
 # CS 523-Final
 Final project submission for BU CAS CS 523
 
+Brain tumor segmentation via u-net neural networks
+
 Dataset can be downloaded here: https://www.kaggle.com/mateuszbuda/lgg-mri-segmentation
-
-
 
 #### Our goal:
 We want to not only indicate the tumors that exist clearly in brain MR images but also indicate those which cannot be seen from
