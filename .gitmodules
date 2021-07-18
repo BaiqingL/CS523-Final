@@ -1,0 +1,3 @@
+[submodule "model/CS523-Model"]
+	path = model/CS523-Model
+	url = git@github.com:BaiqingL/CS523-Model.git
